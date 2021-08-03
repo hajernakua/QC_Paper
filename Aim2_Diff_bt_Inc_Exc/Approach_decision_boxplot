@@ -1,0 +1,24 @@
+### this script will share the function to create the approach by QC decision boxplot in the main paper (figure 5)
+### this function was the same throughout all the datasets
+
+
+LThickness_AllGroupsPOND_Boxplot2 <- function(ALLPOND_GROUPS) {
+  library(ggplot2)
+  library(ggpubr)
+  library(ggsignif)
+  Data_Sample <- ALLPOND_GROUPS[, c('LThickness', 'Approach', 'QCDecision')] #making dataframe smaller
+  Boxplot <- ggplot(data = Data_Sample, aes(x = Approach, y = LThickness, fill = Decision), na.rm = TRUE) +
+    stat_boxplot(geom = "errorbar") +
+    geom_boxplot(alpha = 0.3, size = 0.2, outlier.color = 'red', outlier.shape = NA, aes(color = Decision)) +
+    stat_summary(fun.y = 'mean', geom = 'point', shape = 8, size = 0.5) +
+    geom_jitter(aes(color = QCDecision), size = 1, position = position_jitterdodge()) +
+    labs(x = "Quality Control Approach", y = "Left Cortical Thickness (mm)") +
+    theme_classic() + 
+    theme(text = element_text(size = 20)) +
+    theme(axis.text = element_text(size = 20))
+  return(Boxplot)
+}
+
+
+
+
