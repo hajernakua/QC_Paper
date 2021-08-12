@@ -1,4 +1,6 @@
 ### this script will perform the post-hoc between-diagnoses analysis examining whether specific brain ROIs that have been reported to differ between diagnosis groups also differ in the POND sample and whether the results change depending on the QC approach implemented.
+### the same script was used for POND and HBN data with different inputs from both (in this shared script, I only show the POND analysis)
+
 
 ##loading any packages
 library(sjstats)
