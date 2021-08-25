@@ -1,5 +1,5 @@
 ###this script will perform the supplementary analyses to evaluate whether excluded participants would feature greater clinical impairments (supplementary measures) compared to included participants, across all QC approaches
-### many aspects of this script will be shared across the different datasets, but there are some dataset specific commands
+###this script was shared across the different datasets with the removal of NAs for GENDER being the only POND-specific command 
 
 
 #1. Chi-square test to examine differences in gender and diagnosis across included and excluded groups for each QC approach 
